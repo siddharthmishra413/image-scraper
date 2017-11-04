@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Let's rock with chat. </title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+	<!-- for offline -->
+	<!-- <script src='dist/libs/angular.js'></script>
+	<script src='dist/libs/angular-ui-router.min.js'></script>
+	<script src='dist/libs/angular-toastr.tpls.js'></script> -->
+
+	<script src="js/app.js"></script>
+	<script src="routes/config.js"></script>
+
+	<!-- services -->
+	<script src="services/userServices.js"></script>
+
+	<!-- controllers-->
+	<script src="component/imageUpload/imageUploadCtrl.js"></script>
+	<script src="component/findImages/findImagesCtrl.js"></script>			
+	<script src="component/allKey/allKeyCtrl.js"></script>	
+
+	<!-- <script type="text/javascript">
+		const socket = io.connect("http://localhost:8080");
+		console.log("scoket==>>",socket);
+		socket.on('news',(data)=>console.log('data==>',data));
+		socket.emit("message",{'msg':'hello'});
+	</script> -->
+</head>
+<body ng-app="demoApp">
+<ui-view></ui-view>
+</body>
+</html>

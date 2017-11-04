@@ -1,0 +1,25 @@
+<div>
+    <button ui-sref="allKey">All Keys</button>
+    <button ui-sref="findImages">Search Image from local server</button>
+    <button ng-if="storingImages.length>0" ng-click="saveimage()">submitt</button>
+    <table>
+        <tr>
+            <td><label>Enter key</label></td>
+            <td><input type="text" name="image" ng-model='data.image'></td>
+        </tr>
+        
+        <tr>
+            <td align="center" colspan="2"><button ng-click="googleImages()">submitt</button></td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr ng-repeat="storingImages in storingImages">
+            <td ><img style="width: 500px;height: 500px;" src="{{storingImages.url}}" id="output"> </td>
+        </tr>
+        
+    </table>
+    <button ng-if="storingImages.length>0" ng-click="saveimage()">submitt</button>	
+    
+    
+    </div>	

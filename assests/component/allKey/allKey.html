@@ -1,0 +1,17 @@
+<div>
+    
+    <table>
+    
+        <tr ng-repeat="dataArray in dataArray">
+            <td><a style="cursor: pointer;" ng-click="findImages(dataArray)">{{dataArray}}</a></td>
+        </tr>
+        
+    </table>
+    <table ng-if = "dataArray2">
+        <tr >
+            <td ng-repeat="data in dataArray1" ><img  style="width: 500px;height: 500px;" src="{{data.image}}" id="output"  > </td>
+        </tr>
+        
+    </table>
+    </div>	
+    

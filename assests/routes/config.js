@@ -1,0 +1,20 @@
+app.config(($httpProvider,$stateProvider,$urlRouterProvider)=>{
+	$stateProvider
+		.state('imageUpload',{
+			url:'/imageUpload',
+			controller:'imageUploadCtrl',
+			templateUrl:'../component/imageUpload/imageUpload.html'
+		})
+		.state('findImages',{
+			url:'/getAllImages',
+			controller:'findImagesCtrl',
+			templateUrl:'../component/findImages/findImages.html'
+		})
+		.state('allKey',{
+			url:'/allKey',
+			controller:'allKeyCtrl',
+			templateUrl:'../component/allKey/allKey.html'
+		})
+		
+		$urlRouterProvider.otherwise('/imageUpload');
+});
